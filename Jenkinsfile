@@ -11,17 +11,17 @@ pipeline {
         git 'https://github.com/pmisiek/spa.git'
       }
     }
-    stage('Building image') {
+    stage('Build image') {
       steps{
         script {
           dockerImage = docker.build registry + ":$BUILD_NUMBER"
         }
       }
     }
-    stage('Deploy Image') {
+    stage('Push Image') {
       steps{
         script {
-          docker.withRegistry( '', registryCredential ) { //Push image to default dockerhub epository
+          docker.withRegistry( '', registryCredential ) { //Push image to default dockerhub repository
             dockerImage.push()
           }
         }
