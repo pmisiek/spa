@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Git checkout') {
       steps {
-        git 'https://github.com/pmisiek/spa.git'
+        git branch: 'develop', url: 'https://github.com/pmisiek/spa.git'
       }
     }
     stage('Prepare') {
