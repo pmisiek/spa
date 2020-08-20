@@ -41,6 +41,7 @@ pipeline {
           }
         }
       }
+    }
     stage('Build - npm build') {
       steps{
         script {
