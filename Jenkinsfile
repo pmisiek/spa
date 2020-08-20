@@ -41,13 +41,13 @@ pipeline {
           }
         }
       }
-      stage('Build - npm build') {
-        steps{
-          script {
-              sh 'npm run build'
-          }
+    stage('Build - npm build') {
+      steps{
+        script {
+            sh 'npm run build'
         }
       }
+    }
     stage('Build image') {
       steps{
         script {
