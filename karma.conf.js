@@ -31,6 +31,7 @@ module.exports = function (config) {
       HeadlessChrome:{
         base: 'ChromeHeadless',
         flags: ['--no-sandbox']
+      },
     },
     restartOnFileChange: true
   });
